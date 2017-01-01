@@ -1,0 +1,21 @@
+{
+  "name": "generator-ngtswp",
+  "version": "1.0.0",
+  "description": "yeoman generator based on angular, typescript and webpack",
+  "files": ["generators"],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "author": "Francisco Poleo",
+  "license": "ISC",
+  "dependencies": {
+    "@types/lodash": "^4.14.45",
+    "@types/node": "^6.0.55",
+    "lodash": "^4.17.3",
+    "yeoman-generator": "^1.0.1"
+  }
+}
+
