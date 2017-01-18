@@ -7,11 +7,12 @@ import <%= config  %> from './<%= name %>.config';
 
 let bundle:Array<string> =  ['ui.router'];
 
-const <%= name %>Module:ng.IModule = 
+const <%= name %>Module:string = 
         angular
-            .module('<%= parentModule  %>.<%= name  %>',bundle)
+            .module('<%= parentModule  %>')
             .component('<%= name %>',<%= name  %>Component.getInstance())
             .config(<%= config  %>);
+            .name;
 
 export default <%= name %>Module;
 
