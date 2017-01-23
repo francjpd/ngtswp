@@ -14,9 +14,9 @@ class <%=name %>ComponentBindings{
         this.isWorking = '<';
     }
 
-    static getInstance(): <%= name %>ComponentBinding{
+    static getInstance(): <%= name %>ComponentBindings{
         if(!angular.isDefined(this.instance)){
-            this.instance = new <%= name %>ComponentBinding();
+            this.instance = new <%= name %>ComponentBindings();
         }
         return this.instance;
     }

@@ -1,23 +1,22 @@
 ///<reference types="angular"/>
 
-interface I<%= name %>{
-    isWorking:boolean;
-}
 
-interface I<%= name %>ComponentController extends I<%= name %> {
+interface I<%= name %>ComponentController  extends ng.IComponentController {
 	doSomething():string;
 	
 }
 export default class <%= ctrl  %> implements I<%= name %>ComponentController{
     static $inject :string[] = ['$rootScope'];
 
-    constructor(){
+    constructor(private $rootScope:ng.IScope){
         
     }
-    public static getInstance():<%= ctrl  %>{
-        return new <%= ctrl  %>();
-    }
+
     $onInit(){
-        console.log('Need to modify <%= name %>Controller $rootScope', $rootScope)
+        console.log('Need to modify <%= name %>Controller $rootScope', this.$rootScope)
+    }
+
+    doSomething():string{
+        return 'something';
     }
 }
